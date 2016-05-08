@@ -1,31 +1,44 @@
+body {
+	background-color: seashell;
+	font-family: "Verdana", Times, serif;
+	}
+
 h1 {
-	text-align: center
+	text-align: center;
+	color: seagreen;
 	}
 section.menu {
 	position: relative;
 	height: 100px;
 	margin-bottom: 20px;
 	margin-left: 5px;
-	margin-right:5px;
-	background-color: lightgreen;
+	margin-right: 5px;
+	background-color: springgreen;
 	border: 1px solid black;
 	box-sizing: border-box;
+	padding-top: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: auto;
 	}
 	
 div.titlesec {
-	position: relative;
+	position: absolute;
 	top: 0px;
 	right: 0px;
 	height: 20px;
-	width: 60px;
+	width: 65px;
+	font-size: 90%;
 	background-color: green;
 	border: 1px solid black;
 	color: white;
+	padding-left: 2px;
 	}
 
 	
 @media (min-width: 992px) {
  		.col_lg_3 {
+		position: relative;
 		width: 32%;
 		float: left;
 		}
@@ -33,6 +46,7 @@ div.titlesec {
 
 @media (min-width: 768px) and (max-width: 991px) {
 	.col_md_6, .col_md_12 {
+	position: relative;
 	float: left;
 	}
 	.col_md_6 {
@@ -45,7 +59,8 @@ div.titlesec {
 
 @media (max-width: 767px) {
 	.col_sm_12 {
-		float: left;
-		width: 100%;
-		}
-	}	
+	position: relative;
+	float: left;
+	width: 100%;
+	}
+}	
