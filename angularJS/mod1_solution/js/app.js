@@ -18,12 +18,25 @@ function LunchCheckController($scope) {
         }
 
         function countItems(items) {
-            var counts = str.split(",");
-               console.log(counts);
-            if (length.counts > 4) {
-               $scope.itemMsg = 'yli nelj'; 
-            } else if (length.counts <= 4) {
-                $scope.itemMsg = 'alle nelj'; 
+            var counts = items.split(",");
+            var count = 0;
+            console.log(counts);
+            console.log(counts.length);
+            for (var i = 0; i < counts.length; i++) {
+                if (counts[i] !== '') {
+                    count++;
+                }
+               
+            } 
+            if (count >= 4) {
+               $scope.itemMsg = 'Too much'; 
+            } else if (count < 4) {
+                $scope.itemMsg = 'Enjoy!!'; 
+        
+       //     if (counts.length >= 4) {
+         //      $scope.itemMsg = 'Too much'; 
+          //  } else if (counts.length < 4) {
+           //     $scope.itemMsg = 'Enjoy!!'; 
 
             }
         };
